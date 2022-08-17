@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Home from './Page/Home';
+import {Routes , Route} from 'react-router-dom'
+import Gif from './Component/Gif';
+import { Postcontexts } from './Context/contextapi';
+import Conformpost from './Component/conformpost';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <>
+   <Postcontexts>
+   <div className="navbar">
+      <h3>Post Creator</h3>
     </div>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/gif' element={<Gif/>}/>
+    <Route path='/conform' element={<Conformpost/>}/>
+  
+  </Routes>
+  </Postcontexts>
+   
+   </>
   );
 }
 
