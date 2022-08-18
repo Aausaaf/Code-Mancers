@@ -17,8 +17,12 @@ export function Postcontexts({children}){
       seturl(t)
   }
   return (<>
+
    <Postcontext.Provider value={{istext,handleposttext,isurl,handleposturl}}>
+
        {children}
+
    </Postcontext.Provider>
+   
   </>)
 }

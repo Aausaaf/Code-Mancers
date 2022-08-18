@@ -4,7 +4,7 @@ import Home from './Page/Home';
 import {Routes , Route} from 'react-router-dom'
 import Gif from './Component/Gif';
 import { Postcontexts } from './Context/contextapi';
-import Conformpost from './Component/conformpost';
+import Conformpost from './Component/Confirmpost';
 function App() {
   return (
    <>
